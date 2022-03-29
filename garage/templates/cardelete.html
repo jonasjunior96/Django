@@ -1,0 +1,37 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deletar carro</title>
+
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+</head>
+<body>
+
+    <h3><center>Deletar carro</center></h3>
+<div align="center">
+    <img src="{% static 'img/estacionamento2.png' %}" width="200">
+
+<form action="" method="POST">
+
+    <p>
+        deseja excluir o carro : <b>{{ object }}</b>
+    </p>
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" clas="btn btn-danger"> Excluir </button>
+
+</form>
+</div>
+
+</body>
+</html>
